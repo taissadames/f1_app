@@ -1,5 +1,5 @@
      
-require 'dotenv/load'
+# require 'dotenv/load'
 require 'sinatra'
 
 
