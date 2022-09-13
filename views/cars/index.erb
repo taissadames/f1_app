@@ -1,1 +1,37 @@
-<h1>hello world</h1>
+<h1>Formula 1 Cars Collection</h1>
+
+<% if logged_in?%>
+    <h2>Welcome to F1 cars collection, <%= current_user['first_name']%></h2>
+
+    <section class="controls">
+        <form action="/sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button>Logout</button>
+        </form>
+        <br>
+        <a href="/cars/new">Add new car</a>
+    </section>
+
+    <section class="cars">
+        <% cars.each do |car| %>
+            <section class="car">
+            <header>
+            <h2><%= car['name'] %></h2>
+                <section class="controls">
+                    <a href="/cars/<%= car['id'] %>/edit">Edit</a>
+                    
+                    <form action="/cars/<%= car['id']%>" method="POST">
+                        <input type="hidden" name="_method" value="delete">
+                        <button>Delete</button>
+                    </form>
+                </section>
+            </header>
+
+            <img src="<%= car['image_url'] %>" alt="">
+            </section>
+        <% end %>
+    </section>
+<% else %>
+    <a href="/sessions/new">Login</a>
+    <a href="/users/new">Sign up</a> 
+<% end %>   

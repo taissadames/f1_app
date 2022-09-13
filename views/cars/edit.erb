@@ -1,0 +1,13 @@
+<h1>Edit Car</h1>
+<form action="/cars/<%= car['id'] %>" method="POST">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="">Name:</label>
+    <input type="text" name="name" value="<%= car['name'] %>">
+
+    <label for="">Image URL:</label>
+    <input type="text" name="image_url" value="<%= car['image_url'] %>">
+
+    <button>Update car</button>
+</form>
+
