@@ -12,7 +12,7 @@ post '/sessions' do
     if user && BCrypt::Password.new(user['password_digest']) == password
       # log the user in
       session['user_id'] = user['id']
-  
+      user_id = session['user_id']
       redirect '/'
     end
 end
