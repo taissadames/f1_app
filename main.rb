@@ -6,7 +6,7 @@ require './db/db'
 # this makes the session hash work
 enable :sessions
 
-require './controllers/foods_controller'
+require './controllers/cars_controller'
 require './controllers/users_controller'
 require './controllers/sessions_controller'
 
