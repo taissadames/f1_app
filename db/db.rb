@@ -6,5 +6,3 @@ def run_sql(sql, sql_params = [])
   db.close
   results
 end
-
-# HTTParty.get("http://omdbapi.com?apikey=#{ENV['OMDB_API_KEY']}&t=jaws")
