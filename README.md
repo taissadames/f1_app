@@ -21,7 +21,7 @@ $ git clone f1_app
 $ cd f1_app
 $ code .
 ```
-- Add in-app screenshots.
+<img width="910" alt="Screen Shot 2022-09-14 at 11 30 24 pm" src="https://user-images.githubusercontent.com/110708328/190175019-19491af8-0d11-4cc6-8084-9aedd7a5edb4.png">
 
 ## :pencil2: Planning & Problem Solving
 - Talk about approach to the problem.
