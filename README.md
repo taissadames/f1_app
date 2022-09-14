@@ -1,15 +1,25 @@
-# Project Name
-The briefest description of my cool project and why you should all use it.
+# F1 Virtual Gallery App
+This is the second individual project of the General Assembly Software Engineering Immersive. The MVP requirements include:
+- Full stack application using Ruby and Sinatra gem.
+- A CRUD application, with the hability to log in and log out the users.
+- Deployment on Heroku.
+- At least one extra feature.
+- Optional use of an API.
+- Time-frame to complete the project: 2 days.
 
-## :computer: [Click here](https://f1-collection-app.herokuapp.com/) to see my live project!
+## :computer: [Click here](https://f1-collection-app.herokuapp.com/) to check my app!
 
 ## :page_facing_up: About
-- How to use my awesome project.
-- Download instructions (if relevant):
+- The home page includes option for the user to log in, register or check F1 drivers quotes.
+- Only registered users are able to log in and use the app.
+- Each photo gallery is individual, users can only access their own galleries.
+- The driver's quotes are generated through the following [API] (https://rapidapi.com/aleixalguero0/api/f1-drivers-quotes/)
+
+- Download instructions:
 ```zsh
-$ git clone my-awesome-app
-$ cd my-awesome-app
-$ node app.js
+$ git clone f1_app
+$ cd f1_app
+$ code .
 ```
 - Add in-app screenshots.
 
