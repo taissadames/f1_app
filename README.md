@@ -13,7 +13,7 @@ This is the second individual project of the General Assembly Software Engineeri
 - The home page includes option for the user to log in, register or check F1 drivers quotes.
 - Only registered users are able to log in and use the app.
 - Each photo gallery is individual, users can only access their own galleries.
-- The driver's quotes are generated through the following [API] (https://rapidapi.com/aleixalguero0/api/f1-drivers-quotes/)
+- The driver's quotes are generated through the following [API](https://rapidapi.com/aleixalguero0/api/f1-drivers-quotes/)
 
 - Download instructions:
 ```zsh
