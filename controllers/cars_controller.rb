@@ -1,10 +1,4 @@
 require './models/car'
-
-# get '/cars/all_listing' do
-# #   cars = all_cars()
-# "Hello"
-# end
-
 get '/' do
     # cars = all_cars()
     owner_id = session['user_id']
@@ -51,4 +45,17 @@ delete '/cars/:id' do
   
     delete_car(id)
     redirect '/'
+end
+
+get '/views/quotes' do
+
+    result = HTTParty.get('https://f1-drivers-quotes.p.rapidapi.com/quotes', headers: { "X-RapidAPI-Key" => '581e62959emsh4b61c030a7e4754p13a9b4jsnff04dbdb3cbe' })
+  
+    all_quotes = result.parsed_response
+    # all_quotes = result
+    
+    # p all_quotes
+    erb :quotes, locals: {
+      all_quotes: all_quotes
+    }
 end

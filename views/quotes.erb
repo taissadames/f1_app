@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<% all_quotes.each do |quote_item| %>
+    <h2><span><%= quote_item['author']%></h2></span>
+  <p>
+    <span><%= quote_item['quote'] %></span>
+  </p>
+<% end %>
+
+<form action="/" method="GET">
+  <button>Home</button>
+</form>
+
+</body>
+</html>
