@@ -21,3 +21,5 @@ CREATE TABLE users(
 
 ALTER TABLE users ADD COLUMN password_digest TEXT;
 
+ALTER TABLE cars ADD COLUMN owner TEXT;
+

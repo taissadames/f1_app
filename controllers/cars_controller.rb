@@ -1,10 +1,16 @@
 require './models/car'
 
+# get '/cars/all_listing' do
+# #   cars = all_cars()
+# "Hello"
+# end
+
 get '/' do
-    cars = all_cars()
-  
+    # cars = all_cars()
+    owner_id = session['user_id']
+    logged_cars = car_owner(owner_id)
     erb :'cars/index', locals: {
-      cars: cars
+      cars: logged_cars
     }
 end
   
@@ -15,8 +21,9 @@ end
 post '/cars' do
     name = params['name']
     image_url = params['image_url']
+    owner_id = session['user_id']
 
-    create_car(name, image_url)
+    create_car(name, image_url, owner_id)
 
     redirect '/'
 end

@@ -2,8 +2,8 @@ def all_cars()
     run_sql("SELECT * FROM cars ORDER BY id")
 end
 
-def create_car(name, image_url)
-    run_sql("INSERT INTO cars(name, image_url) VALUES($1, $2)", [name, image_url])
+def create_car(name, image_url, owner)
+    run_sql("INSERT INTO cars(name, image_url, owner) VALUES($1, $2, $3)", [name, image_url, owner])
 end
 
 def get_car(id)
@@ -16,4 +16,8 @@ end
 
 def delete_car(id)
     run_sql("DELETE FROM cars WHERE id = $1", [id])
+end
+
+def car_owner(owner_id)
+    run_sql("SELECT * FROM cars WHERE owner = $1", [owner_id])
 end
